@@ -1,0 +1,35 @@
+{
+    "name": "OpenRA",
+
+    "download": {
+        "type": "github",
+        "repo": "OpenRA/OpenRA",
+        "asset_regex": ".*x64\\.exe$"
+    },
+
+    "install": {
+        "type": "installer",
+        "silent_args": [
+            "/VERYSILENT",
+            "/DIR={INSTALLDIR}"
+        ]
+    },
+
+    "copy": [
+
+        {
+            "source": "Assets\\Movies",
+            "destination": "Content\\Movies",
+            "required": false
+        },
+
+        {
+            "source": "Assets\\Music",
+            "destination": "Content\\Music"
+            "required": false
+        }
+
+    ],
+
+    "launch": "OpenRA.Game.exe"
+}
